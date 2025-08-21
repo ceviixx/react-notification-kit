@@ -1,6 +1,5 @@
 # React Notification Kit
 
-
 **Build status**
 
 [![Node 18](https://img.shields.io/github/actions/workflow/status/ceviixx/react-notification-kit/ci-node18.yml?branch=main&label=Node%2018&logo=node.js)](https://github.com/ceviixx/react-notification-kit/actions/workflows/ci-node18.yml)
@@ -19,6 +18,22 @@ No context providers, no external libraries – just drop in a `<Toaster />` and
 - ⏱ Auto-dismiss with progress bar
 - 🎨 Built with Tailwind classes (but works without Tailwind – you can restyle)
 - ⚡ Works with or without TypeScript
+
+---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td><img src="./screenshots/toast-success.png" alt="Success toast" width="230" /></td>
+    <td><img src="./screenshots/toast-error.png" alt="Error toast" width="230" /></td>
+    <td><img src="./screenshots/toast-warning.png" alt="Warning toast" width="230" /></td>
+  </tr>
+  <tr>
+    <td><img src="./screenshots/toast-promise.png" alt="Promise toast" width="230" /></td>
+    <td><img src="./screenshots/toast-info.png" alt="Info toast" width="230" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -43,13 +58,18 @@ pnpm add github:ceviixx/react-notification-kit
 
 ```tsx
 'use client';
+
 import { Toaster } from 'react-notification-kit';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {children}
-      <Toaster position="top-right" /> {/* Mount once */}
+      <html>
+        <body>
+          {children}
+          <Toaster position="top-right" /> {/* Mount once */}
+        </body>
+      </html>
     </>
   );
 }
@@ -59,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 ```tsx
 'use client';
+
 import { toast } from 'react-notification-kit';
 
 export default function DemoPage() {
@@ -107,10 +128,10 @@ toast.show({
 
 | Prop             | Type                                  | Default       | Description                        |
 |------------------|---------------------------------------|---------------|------------------------------------|
-| `position`       | `"top-right"|...`                    | `"top-right"` | Where notifications appear         |
+| `position`       | `"top-right"` / ...                   | `"top-right"` | Where notifications appear         |
 | `maxVisible`     | `number`                              | `3`           | Max toasts visible at once         |
 | `defaultDuration`| `number` (ms)                         | `4000`        | Default auto-dismiss time (ms)     |
-| `container`      | `HTMLElement | null`                 | `document.body` | Custom portal mount target       |
+| `container`      | `HTMLElement` / `null`                | `document.body` | Custom portal mount target       |
 
 ### `toast` API
 
