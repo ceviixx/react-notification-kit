@@ -1,0 +1,44 @@
+{
+    "name": "react-notification-kit",
+    "version": "0.1.0",
+    "description": "Lightweight React notification/toast kit with zero deps.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ceviixx/react-notification-kit.git"
+    },
+    "keywords": [
+        "react",
+        "notification",
+        "toast",
+        "toaster",
+        "ui",
+        "kit"
+    ],
+    "sideEffects": false,
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.esm.js",
+            "require": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc"
+    },
+    "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18"
+    },
+    "devDependencies": {
+        "typescript": "^5.4.0",
+        "@types/react": "^18.2.66",
+        "@types/react-dom": "^18.2.22"
+    }
+}
