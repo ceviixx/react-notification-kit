@@ -7,23 +7,14 @@
         "type": "git",
         "url": "https://github.com/ceviixx/react-notification-kit.git"
     },
-    "keywords": [
-        "react",
-        "notification",
-        "toast",
-        "toaster",
-        "ui",
-        "kit"
-    ],
     "sideEffects": false,
+    "type": "module",
     "main": "dist/index.js",
-    "module": "dist/index.esm.js",
     "types": "dist/index.d.ts",
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
-            "import": "./dist/index.esm.js",
-            "require": "./dist/index.js"
+            "import": "./dist/index.js"
         }
     },
     "files": [
